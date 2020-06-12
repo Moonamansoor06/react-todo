@@ -4,13 +4,17 @@ import { Button, TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import {v4 as uuid} from "uuid";
 
+// this compinent will render the todo form with necesary filds and actions
+//use state is a react hook
+
 function TodoForm({ addTodo }) {
   const [todo, setTodo] = useState({
     id: "",
     task: "",
     completed: false
   });
-
+//this function is an event handler
+  // this will handle change in task input and take that event as parameter
   function handleTaskInputChange(e) {
     // e.target.value contains new input from onChange
     // event for input elements
@@ -33,6 +37,7 @@ function TodoForm({ addTodo }) {
         type="text"
         name="task"
         value={todo.task}
+        // everytime change takes place the event handler will be called
         onChange={handleTaskInputChange}
       />
       <Button type="submit">Submit</Button>
