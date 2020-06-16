@@ -38,5 +38,5 @@ jobs:
       run: npm install -g surge
     
     - name: deploying on surge
-      run: surge ./build http://mman-class4.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build http://cnc-react-todo.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
     
